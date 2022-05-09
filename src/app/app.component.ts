@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular';
+  name  = 'Xuan Tuong';
+  class = 'Web16304';
+
+  // Phần định nghĩa, logic, đặt giá trị cho biến 
 }
