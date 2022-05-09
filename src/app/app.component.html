@@ -352,6 +352,30 @@
 
   </div>
 
+  <div class="content" role="main">
+    <!-- DSSV -->
+    <div>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Mã SV</th>
+            <th>Tên SV</th>
+            <th>Trạng Thái</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students">
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>
+              <span class="color-green" *ngIf="student.status === 1">YES</span>
+              <span class="color-red" *ngIf="student.status === 0">NO</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
   <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
