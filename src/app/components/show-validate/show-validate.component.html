@@ -1,7 +1,9 @@
 <!-- Validate Name -->
 <span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['required']">{{key}} không được để trống</span>
-<span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['minlength']">{{key}} phải từ 6</span>
+<span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['minlength']">{{key}} phải từ {{field.errors?.['minlength'].requiredLength}} ký tự</span>
 
 <!-- Validate Age -->
-<span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['min']">{{key}} không thể dưới 1</span>
-<span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['max']">{{key}} không thể trên 100</span>
+<span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['min']">{{key}} không thể dưới {{field.errors?.['min'].min}} ký tự</span>
+<span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['max']">{{key}} không thể trên {{field.errors?.['min'].max}}</span>
+<!-- Validate Email -->
+<span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['email']">{{key}} phải đúng định dạng</span>
