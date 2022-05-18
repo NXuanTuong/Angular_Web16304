@@ -1,5 +1,17 @@
 <div class="container">
   <!--DSGV-->
-  <h1>Danh sách giảng viên</h1>
-  <app-table [users]="teachers"></app-table>
+  <h1 (click)="clickH1()">Danh sách giảng viên {{schoolName}}</h1>
+  <div>
+    <form action="">
+      <input type="text" (keydown)="changeInput($event)" [value]="inputValue">
+    </form>
+    <span>{{inputValue}}</span>
+  </div>
+  <app-form></app-form>
+  <div class="card-body bg-light"></div>
+  
+  <div>
+    <button (click)="changeStatus()" class="btn btn-primary">{{showStatus ? "Ẩn" : "Hiện"}} bảng teacher</button>
+    <app-table *ngIf="showStatus" [users]="teachers"></app-table>
+  </div>
 </div>
