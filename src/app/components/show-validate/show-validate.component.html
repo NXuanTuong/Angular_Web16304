@@ -7,3 +7,4 @@
 <span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['max']">{{key}} không thể trên {{field.errors?.['min'].max}}</span>
 <!-- Validate Email -->
 <span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['email']">{{key}} phải đúng định dạng</span>
+<span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['phoneNumber']">{{key}} phải đúng định dạng</span>
