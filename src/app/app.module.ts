@@ -12,6 +12,9 @@ import { TableAvatarComponent } from './table/table-avatar/table-avatar.componen
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { ShowValidateComponent } from './components/show-validate/show-validate.component';
+import { UserComponent } from './user/user.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { UserFormComponent } from './user/user-form/user-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +25,9 @@ import { ShowValidateComponent } from './components/show-validate/show-validate.
     TableAvatarComponent,
     FormComponent,
     ShowValidateComponent,
+    UserComponent,
+    UserListComponent,
+    UserFormComponent,
   ],
   imports: [
     BrowserModule,

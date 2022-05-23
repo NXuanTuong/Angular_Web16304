@@ -1,6 +1,9 @@
 <div class="container">
   <!--DSGV-->
+  <app-user></app-user>
+  
   <h1 (click)="clickH1()">Danh sách giảng viên {{schoolName}}</h1>
+  
   <div>
     <form action="">
       <input type="text" (keydown)="changeInput($event)" [value]="inputValue">
