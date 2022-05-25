@@ -1,8 +1,13 @@
 <div class="container">
+  <div>
+    <router-outlet></router-outlet>
+    <a routerLink="" class="px-3">Home</a>
+    <a routerLink="user">User</a>
+  </div>
   <!--DSGV-->
-  <app-user></app-user>
+  <!-- <app-user></app-user> -->
   
-  <h1 (click)="clickH1()">Danh sách giảng viên {{schoolName}}</h1>
+  <!-- <h1 (click)="clickH1()">Danh sách giảng viên {{schoolName}}</h1>
   
   <div>
     <form action="">
@@ -16,5 +21,5 @@
   <div>
     <button (click)="changeStatus()" class="btn btn-primary">{{showStatus ? "Ẩn" : "Hiện"}} bảng teacher</button>
     <app-table *ngIf="showStatus" [users]="teachers"></app-table>
-  </div>
+  </div> -->
 </div>
