@@ -18,6 +18,10 @@ import { UserFormComponent } from './user/user-form/user-form.component';
 import { HomeComponent } from './home/home.component';
 import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { AdminProductDetailComponent } from './pages/admin/admin-product-detail/admin-product-detail.component';
+import { AdminProductListComponent } from './pages/admin/admin-product-list/admin-product-list.component';
+import { AdminProductFormComponent } from './pages/admin/admin-product-form/admin-product-form.component';
+import {HttpClientModule} from "@angular/common/http"
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,12 +38,16 @@ import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.compone
     HomeComponent,
     ClientLayoutComponent,
     AdminLayoutComponent,
+    AdminProductDetailComponent,
+    AdminProductListComponent,
+    AdminProductFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
