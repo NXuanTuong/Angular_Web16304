@@ -1,3 +1,9 @@
+<div>
+    <a routerLink="/admin/products/add">
+        <button class="btn btn-primary">Create</button>
+    </a>
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -12,7 +18,11 @@
             <td>{{product.name}}</td>
             <td>
                 <a routerLink="/admin/products/{{product.id}}">
-                <button class="btn btn-info">Deatils</button></a>
+                <button class="btn btn-info mx-3">Deatils</button></a>
+                <a routerLink="/admin/products/edit/{{product.id}}">
+                    <button class="btn btn-primary mx-3">Edit</button>
+                </a>
+                <button class="btn btn-danger" (click)="onDelete(product.id)">Delete</button>
             </td>
         </tr>
     </tbody>

@@ -10,6 +10,8 @@ import { TableGenderComponent } from './table/table-gender/table-gender.componen
 import { TableStatusComponent } from './table/table-status/table-status.component';
 import { TableAvatarComponent } from './table/table-avatar/table-avatar.component';
 import { FormsModule } from '@angular/forms';
+//ReactiveFormModule
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { ShowValidateComponent } from './components/show-validate/show-validate.component';
 import { UserComponent } from './user/user.component';
@@ -47,7 +49,8 @@ import {HttpClientModule} from "@angular/common/http"
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

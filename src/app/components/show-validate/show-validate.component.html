@@ -8,3 +8,5 @@
 <!-- Validate Email -->
 <span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['email']">{{key}} phải đúng định dạng</span>
 <span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['phoneNumber']">{{key}} phải đúng định dạng</span>
+
+<span class="text-danger" *ngIf="(field.touched || field.dirty) && field.errors?.['hasProductError']">{{key}} phải chứa product</span>

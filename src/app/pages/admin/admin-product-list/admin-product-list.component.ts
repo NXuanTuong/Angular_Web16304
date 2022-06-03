@@ -16,9 +16,21 @@ export class AdminProductListComponent implements OnInit {
   // Khi component render xong sẽ chạy 1 lần vào ngOnInit
   ngOnInit(): void {
     // Lắng nghe API trả về kq, bao giờ trả về xong thì data sẽ có dữ liệu
+    this.onGetList();
+  }
+
+  onGetList() {
     this.productService.getProducts().subscribe((data) => {
       this.products = data
     });
   }
+  onDelete(id: string | number) {
+    const confirmDelete  = confirm("Bạn có muốn xóa không ?")
 
+    if(confirmDelete && id) {
+      this.productService.delete(id).subscribe((data) => {
+        this.onGetList();
+      })
+    }
+  }
 }

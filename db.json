@@ -1,21 +1,28 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Iphone 12"
-        },
-        {
-            "id": 2,
-            "name": "Iphone 11"
-        },
-        {
-            "id": 3,
-            "name": "Iphone 12"
-        },
-        {
-            "id": 19,
-            "name": "Iphone 12"
-        }
-
-    ]
+  "products": [
+    {
+      "id": 2,
+      "name": "Iphone 11"
+    },
+    {
+      "id": 3,
+      "name": "Iphone 12"
+    },
+    {
+      "name": "Nguyễn Xuân Tường",
+      "id": 4
+    },
+    {
+      "name": "Đỗ Đức Nam Nghiện",
+      "id": 5
+    },
+    {
+      "name": "Lê Thị Linh Gầy",
+      "id": 6
+    },
+    {
+      "name": "Cao Đăng Tân Béo",
+      "id": 7
+    }
+  ]
 }
