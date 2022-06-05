@@ -24,6 +24,14 @@ export class AdminProductListComponent implements OnInit {
       this.products = data
     });
   }
+
+  onUpdateStatus(productId: number, newStatus: number) {
+    this.productService.editProduct(`${productId}`, {
+      status: newStatus
+    }).subscribe(data => {
+      this.onGetList();
+    })
+  }
   onDelete(id: string | number) {
     const confirmDelete  = confirm("Bạn có muốn xóa không ?")
 

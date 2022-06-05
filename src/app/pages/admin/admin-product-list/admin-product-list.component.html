@@ -9,6 +9,7 @@
         <tr>
             <th>Id</th>
             <th>Name</th>
+            <th>Status</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -16,6 +17,10 @@
         <tr *ngFor="let product of products, let i = index">
             <td>{{i + 1}}</td>
             <td>{{product.name}}</td>
+            <td>
+                <button *ngIf="product.status === 1" class="btn btn-success" (click)="onUpdateStatus(product.id, 0)">ON</button>
+                <button *ngIf="product.status === 0" class="btn btn-dark" (click)="onUpdateStatus(product.id, 1)">OFF</button>
+            </td>
             <td>
                 <a routerLink="/admin/products/{{product.id}}">
                 <button class="btn btn-info mx-3">Deatils</button></a>
