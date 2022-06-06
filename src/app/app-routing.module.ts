@@ -9,6 +9,8 @@ import { AdminProductDetailComponent } from './pages/admin/admin-product-detail/
 import { UserFormComponent } from './user/user-form/user-form.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserComponent } from './user/user.component';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { CanAccessAdminGuard } from './guards/can-access-admin.guard';
 
 const routes: Routes = [
   { 
@@ -28,6 +30,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component : AdminLayoutComponent,
+    canActivate: [CanAccessAdminGuard], // Kiểm tra việc login trước khi vào admin
     children: [
       {
         path: 'products',
@@ -45,21 +48,12 @@ const routes: Routes = [
     ]
   },
   { 
-    path: 'user', 
-    component: UserComponent, 
+    path: 'auth', 
     children: [ 
-      // {
-      // path: 'user', 
-      // component: UserComponent,
-      // },
       { 
-        path: 'add', 
-        component: UserFormComponent 
-      },
-      { 
-        path: 'edit', 
-        component: UserFormComponent 
-      }, 
+        path: 'login', 
+        component: LoginComponent 
+      } 
     ]
   },
   
@@ -67,6 +61,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [CanAccessAdminGuard]
 })
 export class AppRoutingModule { }

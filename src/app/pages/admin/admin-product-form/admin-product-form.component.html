@@ -6,7 +6,7 @@
         <input type="text" class="form-control" formControlName="name">
         <!--productForm.get('ten thuoc tinh = new FormGroup()') sẽ là kết quả khi lắng nghe-->
         <app-show-validate [field]="productForm.get('name')" key="Tên sản phẩm"></app-show-validate>
-    </div>
+    </div> 
     <div>
         <button class="btn btn-success" [disabled]="!productForm.valid">Submit</button>
         <a routerLink="/admin/products">
